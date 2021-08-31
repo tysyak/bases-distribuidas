@@ -1,0 +1,10 @@
+#+TITLE: Bases de datos Distribuidas
+
+
+* Tareas[0/1]
+
+- [ ] Opinión/resumen [[https://drive.google.com/drive/folders/0B4FYUEdc5Wx6UGtMOGZxVVBFMEU?resourcekey=0-RjfJ_MBz1kXU2S8Wu2WmlQ][intro-bdd.pdf (drive)]]
+
+
+* TODO Practica 1
+Instalación del sistema operativo (ver manual)
