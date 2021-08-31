@@ -48,3 +48,7 @@ Thumbs.db
 *.mov
 *.wmv
 
+/.auctex-auto/
+*.bbl
+*.pdf
+*.tex
