@@ -1,4 +1,4 @@
 #+TITLE: Tarea 1
 #+author: Cristian Romero Andrade
 #+language: es
-#+latex_header_extra: \include{../../../conf.tex}
+#+latex_header_extra: \input{../../conf.tex}
