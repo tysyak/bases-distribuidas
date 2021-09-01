@@ -41,4 +41,26 @@ por el tiempo de espera que este siente.
 
 El articulo menciona de Google F1, la implementación de dicha distribución, sin embargo,
 en el momento que se escribió el articulo F1 solo servia para Google y su Google Ads.
-* TODO Durable Distributed Cache<<sec:4>>
+* Durable Distributed Cache<<sec:4>>
+Resumiendo todo el curso de sistemas distribuidos en un apartado ablando sobre el DDC,
+Esta arquitectura es de las que anula o minimiza los fallos de las distribuciones de
+bases de datos que se hablaron anteriormente. Esta ofrece una gran solución que hasta
+el momento solo era alcanzable por empresas a escala de Google o Facebook. Dicha
+distribución ofrece lo siguiente:
+
++ Rendimiento de escalamiento horizontal.
++ Disponibilidad continua para un alto tiempo de actividad y actualizaciones en vivo.
++ Distribución geográfica a través de la expansión activa-activa en centros de datos.
+
+Esta distribución resuelve varios problemas, a parte de la mencionadas anteriormente,
+al ser una implementación basada en nube (actualmente NuoDB es una de las empresas que
+ofertan esta solución), esta BD cuenta con un tamaño de virtualmente ilimitada,
+con manejo de alta concurrencia y teniendo una latencia mínima.
+
+
+Hemos visto varios enfoques de distribuciones de bases de datos, muchos de ellos han resuelto
+problemas a lo largo de la historia con un gran éxito. aunque, muchos de estas soluciones no han
+cumplido con una solución completa siendo en parte inalcanzables si no se cuenta con los recursos
+similares a Facebook o a Google. Con DDC llega  la posibilidad de que cualquier organización cree
+sistemas con semántica transaccional, capacidades bajo demanda y la capacidad de tener una funcionalidad
+de varios años sin perder estabilidad.
