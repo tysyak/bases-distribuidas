@@ -24,7 +24,7 @@ de distribución relativamente nuevo.
 3. [[sec:3][Synchronous Replication (Replicación sincrónica)]]
 4. [[sec:3][Durable Distributed Cache (Caché distribuida duradera)]]
 
-* Shared Disk<<sec:1>>
+** Shared Disk<<sec:1>>
 Esta distribución consta de tener varios servidores con un mismo
 clúster, donde cada servidor están cargando y almacenado páginas
 de datos en el mismo subsistema de disco compartido,
@@ -32,7 +32,11 @@ esta arquitectura es excelente para sistemas con alta carga de trabajo.
 Sin embargo, este beneficio puede llegar a ser un mismo impedimento ya que
 la misma carga puede provocar un cuello de botella si la base de datos esta
 limitada por las entradas y salidas del sistema.
-* Shared-Nothing/Sharded<<sec:2>>
+
+Ejemplos de DBMS que usan esta arquitectura:
++ Oracle RAC.
++ DB2 PureScale.
+** Shared-Nothing/Sharded<<sec:2>>
 Esta distribución consiste en varios nodos con el mismo propósito, pero
 sin compartir datos y procesos independientes, estos nodos están conectados
 entre sí en cada uno de ellos tienen una copia del sistema del gestor de base
@@ -40,7 +44,10 @@ de datos. Esta arquitectura es útil y escalable, ya que se puede expandir de fo
 casi indefinida. Al igual que la arquitectura anterior, sus bondades también pueden
 llegar a ser un impedimento en su rendimiento, en este caso un buen diseño de
 la BD es critico para la organización de las consultas y que esa este bien optimizada.
-* Synchronous Replication<<sec:3>>
+
+La mayoría de los DBMS NoSQL y las más recientes como MongoDB, CouchDB, VoltDB, etc.
+usan esta arquitectura.
+** Synchronous Replication<<sec:3>>
 Esta forma de construir bases de datos, se podría considerar la más natural de diseñar
 bases de datos distribuidas, en la cual consiste en confirmar una transacción en varias
 ubicaciones antes de regresar un estado de éxito, si la confirmación falla, los cambios
