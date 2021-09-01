@@ -2,7 +2,17 @@
 #+author: Cristian Romero Andrade
 #+options: toc:nil
 #+language: es
+
 #+latex_header_extra: \input{../../conf.tex}
+
+* *What Is A Distributed Database? And Why Do You Need One?*
+
+Una base de datos distribuida (DDB) son bases de datos que se almacenan
+en distintos lugares, todas conectadas entre sí por un sistema de comunicaciones.
+Estas bases de dato están configuradas de tal manera de que se comporte como
+un solo sistema de base de datos, un sistema de base de datos distribuida consta
+de sitios poco acoplados que no comparten componentes físicos
+
 
 El articulo ve a detalle algunas arquitecturas empleadas para
 la Bases de Datos transaccionales distribuidas, donde estas han
