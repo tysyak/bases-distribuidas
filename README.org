@@ -1,9 +1,10 @@
 #+TITLE: Bases de datos Distribuidas
 
 
-* Tareas[0/1]
+* Tareas[1/2]
 
-- [ ] Opinión/resumen [[https://drive.google.com/drive/folders/0B4FYUEdc5Wx6UGtMOGZxVVBFMEU?resourcekey=0-RjfJ_MBz1kXU2S8Wu2WmlQ][intro-bdd.pdf (drive)]]
+- [X] Opinión/resumen [[https://drive.google.com/drive/folders/0B4FYUEdc5Wx6UGtMOGZxVVBFMEU?resourcekey=0-RjfJ_MBz1kXU2S8Wu2WmlQ][intro-bdd.pdf (drive)]]
+- [ ] Ejercicio 1 de [[https://drive.google.com/drive/folders/1C4J0JzXjJrCgxz36Giurs9GRh4z9xElW][tema-01.pdf (drive)]]
 
 
 * TODO Practica 1
