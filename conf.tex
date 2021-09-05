@@ -28,6 +28,7 @@ es-tabla
 \usepackage{caption}
 \usepackage{breqn}
 
+
 \newenvironment{code}{\captionsetup{type=listing}}{}
 
 \usemintedstyle{default}
@@ -43,4 +44,13 @@ es-tabla
   baselinestretch=1.2,
   bgcolor=LightGray,breaklines=true,
   fontsize=\footnotesize
+}
+
+\setminted[bash]{
+  frame=single,
+  framesep=1mm,
+  baselinestretch=0.5,
+  breaklines=true,
+  bgcolor=custom,
+  fontsize=\scriptsize
 }
