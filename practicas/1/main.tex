@@ -1,0 +1,23 @@
+\documentclass{IEEEtran}
+
+\input{../../conf.tex}
+\usepackage{subfiles}
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{./main.bib}
+
+\begin{document}
+\author{Cristian Romero Andrade}
+\title{Práctica 1}
+\date{ }
+\maketitle{}
+\tableofcontents{}
+% --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+\section{Cuestionario Previo}\label{sec:cuestionario-previo}
+
+\subfile{contenido/cuestionario-previo}
+
+%--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+\addcontentsline{toc}{section}{Referencias}
+\printbibliography{}
+\end{document}
