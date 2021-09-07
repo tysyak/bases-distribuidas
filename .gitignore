@@ -51,3 +51,14 @@ Thumbs.db
 *.auctex-auto/
 *.bbl
 *.pdf
+_minted*
+*.aux
+*.bcf
+*.blg
+*.lof
+*.lol
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
