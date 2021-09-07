@@ -50,7 +50,6 @@ Thumbs.db
 
 *.auctex-auto/
 *.bbl
-*.pdf
 _minted*
 *.aux
 *.bcf
@@ -62,3 +61,4 @@ _minted*
 *.run.xml
 *.synctex.gz
 *.toc
+*main.pdf
