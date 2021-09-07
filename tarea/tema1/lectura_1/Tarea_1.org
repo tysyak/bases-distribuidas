@@ -3,7 +3,7 @@
 #+options: toc:nil
 #+language: es
 
-#+latex_header_extra: \input{../../conf.tex}
+#+latex_header_extra: \input{../../template/conf.tex}
 
 * *What Is A Distributed Database? And Why Do You Need One?*
 
