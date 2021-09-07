@@ -11,5 +11,5 @@
   + [ ] Sistemas de Base de datos federados (1)
 
 
-* Practicas[0/1]
-- [ ] Instalación del sistema operativo (ver manual)
+* Practicas[1/1]
+- [X] Instalación del sistema operativo (ver manual)
