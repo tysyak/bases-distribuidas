@@ -1,23 +1,75 @@
 \documentclass{IEEEtran}
 
-\input{../../conf.tex}
-\usepackage{subfiles}
-\usepackage[backend=biber,style=ieee]{biblatex}
-\addbibresource{./main.bib}
+\include{main_config}
 
 \begin{document}
 \author{Cristian Romero Andrade}
-\title{Práctica 1}
+\title{\tituloPractica{}}
+
+\author{\IEEEauthorblockN{Cristian Romero Andrade}}
+
 \date{ }
+
+\input{../portada.tex}
+
 \maketitle{}
 \tableofcontents{}
+
+\dotfill{}
+
+% --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+\begin{abstract}
+  En la presente se instala el sistema operativo Oracle Linux, el cual se usará el
+  en conjunto con el DBMS de Oracle. Se instalara en un entorno virtual usando
+  VirtualBox.
+\end{abstract}
+
+\dotfill{}
+
+\section{Introducción}\label{sec:introduccion}
+\IEEEPARstart{E}{xisten} varias soluciones de bases de datos donde una base de datos es usualmente
+controlada por un sistema de gestión de base de datos (DBMS). En conjunto, los datos
+y el DBMS, junto con las aplicaciones que están asociados con ellos, se conocen como
+un sistema de base de datos, que a menudo se reducen a solo base de datos.
+
+Para este semestre se usará Oracle, el cual la empresa de mismo nombre es una de los
+contribuyentes principales de estas soluciones. A parte de ofrecer un DBMS, la
+comunidad de Oracle nos proporciona una distribución optimizada para ejecutar
+en plenitud software desarrollado de Oracle: \textbf{Oracle Linux}.
+
+\begin{quote}
+  \textit{
+    Oracle Linux un entorno operativo abierto y completo, ofrece herramientas de
+    virtualización, administración e informática nativa en la nube junto con el sistema
+    operativo, en una oferta de soporte unificada. Oracle Linux es compatible en un 100\%
+    con los binarios de aplicación de Red Hat Enterprise Linux\cite{Oracle}.
+  }
+\end{quote}
+
+Si bien se puede instalar en una máquina de manera nativa, por conveniencia del autor, la distribución
+se instalará en una máquina virtual usando VitualBox, una solución de Oracle para poder
+virtualizar arquitecturas x86 y AMD64/Intel64.
+
+\section{Contenido}\label{sec:contenido}
+\subfile{contenido/contenido}
+
+\clearpage{}
+
+\section{Conclusión}\label{sec:conclusion}
+Instalamos las distribución Oracle Linux en una máquina virtual, donde aparte se optimizó
+para que la distribución se ejecute de mejor forma en el entorno de
+\href{https://www.virtualbox.org/}{VirtualBox}. Como extra y por comodidad del alumno se
+utilizó un puente de red en la máquina virtual para usar el protocolo \texttt{ssh} como transferencia
+de archivos (\texttt{SFTP}) y usar el shell remoto (a parte de montar un directorio del host en la VM).
+
 % --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 
-\section{Cuestionario Previo}\label{sec:cuestionario-previo}
+\newpage{}
 
-\subfile{contenido/cuestionario-previo}
+\listoffigures{}
+% \listoftables{}
+% \listoflistings{}
 
-%--- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 \addcontentsline{toc}{section}{Referencias}
 \printbibliography{}
 \end{document}

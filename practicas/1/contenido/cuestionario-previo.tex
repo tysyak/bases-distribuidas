@@ -1,39 +1,45 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \begin{enumerate}
-  \item Investigar el concepto de \textit{Oracle Unbreakable Enterprise Kernel (UEK)}
+  \item Investigar el concepto de \textit{Oracle Unbreakable Enterprise Kernel (UEK)}\\
 
         Es un kernel de linux modificado que ofrece ciertas optimizaciones desarrolladas
         en colaboración de Oracle Database, Oracle middleware y equipos de ingeniería de
         hardware de Oracle para garantizar la estabilidad y el rendimiento óptimo para
         las cargas de trabajo empresariales más exigentes\cite{oracle2021}.
 
-        Se recomienda usar este kernel para correr productos Oracle.
+        Se recomienda usar este kernel para correr productos Oracle.\\
 
-  \item ¿Qué relación existe entre RedHat y Oracle Enterprise Linux?
+  \item ¿Qué relación existe entre RedHat y Oracle Enterprise Linux?\\
 
-        \textbf{RedHat Enterprise Linux y Oracle Enterprise Linux} son distribuciones
+        \textbf{RedHat Enterprise Linux y Oracle Linux} son distribuciones
         GNU/Linux. Oracle Linux es una distribución gratuita utilizada principalmente
         por equipos de nivel pequeño a mediano con bases de datos de Oracle
         existentes, mientras que RHEL es el favorito de las empresas de nivel
         empresarial que priorizan la estabilidad y el tiempo de actividad.
-  \item Función del comando \texttt{nmtui}
+
+        Oracle es una distribución basada de RedHat y este último de Fedora\cite{dw}.\\
+
+  \item Función del comando \texttt{nmtui}\\
 
         Es una interfaz de texto basado en curses\footnote{Curses es una biblioteca para el control de terminales sobre sistemas tipo Unix, posibilitando la construcción de una Interfaz para el usuario, para aplicaciones ejecutadas en un terminal} para poder controlar el programa
         NetworkManager, la cual es un programa que proporciona a los sistemas la
         detección y configuración automática para conectarse a la red\cite{archwiki:nm}.
-  \item Función del comando \texttt{nmcli}
+  \item Función del comando \texttt{nmcli}\\
 
-        Es una interfaz de linea de comandos con el mismo propósito que nmtui\cite{archwiki:nm}.
-  \item Utilidad del archivo \texttt{/etc/hosts}
+        Es una interfaz de linea de comandos con el mismo propósito que \texttt{nmtui}\cite{archwiki:nm}.\\
 
-        Asocia direcciones IP con nombres de hosts, una línea por dirección IP.\@Antes de la
+  \item Utilidad del archivo \texttt{/etc/hosts}\\
+
+        Asocia direcciones IP con nombres de hosts, una línea por dirección IP.\@ Antes de la
         llegada del DNS, la tabla de hosts era la única forma de resolver nombres de host
-        en la incipiente Internet.
-  \item Utilidad el archivo \texttt{/etc/hostname}
+        en la incipiente Internet.\\
 
-        Este archivo sirve para identificar una máquina en una red.
-  \item Utilidad del archivo \texttt{/etc/inittab}
+  \item Utilidad el archivo \texttt{/etc/hostname}\\
+
+        Este archivo sirve para identificar una máquina en una red\cite{archwiki:domain}.\\
+
+  \item Utilidad del archivo \texttt{/etc/inittab}\\
 
         Este archivo indica el modo en el que el sistema será iniciado. Los niveles son indicados
         mediante los números del 0 al 6. En la mayoría de los Unix y distribuciones Linux (aunque
@@ -54,8 +60,60 @@
         \end{code}
 
   \item Considerar la siguiente instrucción \texttt{grub2-mkconfig > /dev/null}
-        ¿Qué significa la instrucción después del comando \texttt{grub2-mkconfig}?
+        ¿Qué significa la instrucción después del comando \texttt{grub2-mkconfig}?\\
 
-  \item Investigar las principales características y usos de un \textit{database link}
+        Genera el archivo de configuración GRUB\footnote{GRand Unified Bootloader,  es
+        un cargador de arranque . El GRUB actual también se conoce como GRUB 2. El GRUB original, o
+        GRUB Legacy , corresponde a las versiones 0.9x.} pero el flujo de salida se suprime\cite{archwiki:grub}.\\
+
+  \item Investigar las principales características y usos de un \textit{database link}.\\
+
+        Un enlace de base de datos le permite hacer referencia a objetos en una base de datos remota.
+        Normalmente, la base de datos remota será otra base de datos de Oracle, pero puede ser cualquier
+        base de datos compatible con ODBC.\@
+        Al acceder a un objeto remoto a través de un enlace de base de datos, la base de datos local
+        actúa como un cliente de Oracle. Hay una variedad de variaciones de sintaxis en la documentación,
+        pero las que usará con más frecuencia son las siguientes.
+        \begin{code}
+          \begin{minted}{sql}
+-- Usuario Remoto: scott
+-- Contraseña Remota: tiger
+
+-- Enlace de base de datos privada a un usuario en una base de datos remota.
+CREATE DATABASE LINK scott_remote
+   CONNECT TO scott IDENTIFIED BY tiger
+   USING 'remote_database';
+
+-- Enlace de Base de DAtos a un usuario en una base de datos remota, con cadena completa de conexión.
+CREATE DATABASE LINK scott_remote
+   CONNECT TO scott IDENTIFIED BY tiger
+   USING '(DESCRIPTION=
+   (ADDRESS=(PROTOCOL=TCP)(HOST=server1.example.com)
+   (PORT=1521))
+   (CONNECT_DATA=(SERVICE_NAME=HRDEV1))
+   )';
+
+-- Enlace de Base de Datos pública.
+CREATE PUBLIC DATABASE LINK scott_remote
+   CONNECT TO scott IDENTIFIED BY tiger
+   USING 'remote_database';
+
+-- Enlace de Base de Datos privada a un usuario de base de datos local.
+CREATE DATABASE LINK scott_local
+   CONNECT TO scott IDENTIFIED BY tiger
+   USING 'local';
+          \end{minted}
+        \end{code}
+
+        Los enlaces de bases de datos privadas solo son visibles para el propietario
+        del enlace. Los enlaces de bases de datos públicas son visibles para todos los
+        usuarios de la base de datos y, como tales, son una posible pesadilla de
+        seguridad.
+
+        Normalmente un enlace de base de datos se usa para conectarse
+        a un usuario en una base de datos remota, donde la cláusula \texttt{USING} apunta a una
+        entrada en el archivo \texttt{tnsnames.ora} de los servidores de la base de datos. Para
+        los enlaces locales, se utiliza la entrada especial de \texttt{local}.
+
 \end{enumerate}
 \end{document}
