@@ -6,9 +6,11 @@
 - [X] Opinión/resumen [[https://drive.google.com/drive/folders/0B4FYUEdc5Wx6UGtMOGZxVVBFMEU?resourcekey=0-RjfJ_MBz1kXU2S8Wu2WmlQ][intro-bdd.pdf (drive)]]
 - [X] Ejercicio 1 de [[https://drive.google.com/drive/folders/1C4J0JzXjJrCgxz36Giurs9GRh4z9xElW][tema-01.pdf (drive)]]
 
-* Investigar[0/2] (a mano con bibliografía)
+* Investigar[0/3] (a mano con bibliografía)
   + [ ] Multibase de datos (1)
   + [ ] Sistemas de Base de datos federados (1)
+  + [ ] Que es un SemiJoin y Dos instrucción SQL
+    EMP1 EMP2
 
 
 * Practicas[1/1]
