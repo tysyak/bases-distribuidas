@@ -1,0 +1,45 @@
+#+TITLE: Serie
+#+options: toc:nil
+* A
+
++ $P_1 = \sigma_{a_1}(P)$
++ $P_2 = \sigma_{a_2}(P)$
++ $P_3 = \sigma_{a_3}(P)$
++ $P_3 = \sigma_{a_4}(P)$
+
+
+Donde:
++ $a_1 : tipo = I$
++ $a_2 : tipo = D$
++ $a_3 : tipo = A$
++ $a_4 : tipo = null$
+
+* B
+$P_1 \cup P_2 \cup P_3 \cup P_4$
+
+* C
+** =PROFESOR_1=
+
+| =PROFESOR_ID= | =NOMBRE=  | =AP_PATERNO= | =AP_MATERNO= | =TIPO= |
+|-------------+--------+------------+------------+------|
+|           1 | JUAN   | LOMA       | KIM        | I    |
+|           4 | PEPE   | PEREZ      | BAES       | I    |
+
+** =PROFESOR_2=
+| =PROFESOR_ID= | =NOMBRE= | =AP_PATERNO= | =AP_MATERNO= | =TIPO= |
+|-------------+--------+------------+------------+------|
+|           2 | LALO   | PAEZ       | MONTES     | D    |
+|           5 | HUGO   | RUIZ       | LUNA       | D    |
+|             |        |            |            |      |
+
+** =PROFESOR_3=
+| =PROFESOR_ID= | =NOMBRE= | =AP_PATERNO= | =AP_MATERNO= | =TIPO= |
+|-------------+--------+------------+------------+------|
+|           3 | LUIS   | GIL        |            | A    |
+
+
+** =PROFESOR_4=
+| =PROFESOR_ID= | =NOMBRE= | =AP_PATERNO= | =AP_MATERNO= | =TIPO= |
+|---------------+----------+--------------+--------------+--------|
+|             6 | MARA     | RUIZ         |              |        |
+|             7 | EVA      | GIL          | CARSO        |        |
