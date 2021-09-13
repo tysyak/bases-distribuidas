@@ -1,7 +1,7 @@
 \documentclass{IEEEtran}
 
-\include{main_config}
-
+%\include{main_config}
+\input{conf.tex}
 \begin{document}
 \author{Cristian Romero Andrade}
 \title{\tituloPractica{}}
@@ -10,19 +10,21 @@
 
 \date{ }
 
-\input{./portada.tex}
+% \input{./portada.tex}
 
-\maketitle{}
-\tableofcontents{}
+% \maketitle{}
+% \tableofcontents{}
 
-\input{./main.tex}
+\begin{code}{latex}{A caption}{label1}
+Test of \LaTeX code
+\end{code}
 
 \newpage{}
 
 \listoffigures{}
 % \listoftables{}
-% \listoflistings{}
+\listoflistings{}
 
-\addcontentsline{toc}{section}{Referencias}
-\printbibliography{}
+% \addcontentsline{toc}{section}{Referencias}
+% \printbibliography{}
 \end{document}

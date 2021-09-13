@@ -45,8 +45,7 @@
         mediante los números del 0 al 6. En la mayoría de los Unix y distribuciones Linux (aunque
         no podría decir que en todas) el nivel de ejecución son los siguientes:
 
-        \begin{code}
-          \begin{minted}{bash}
+        \begin{code}{bash}
 # Nivel de ejecución predeterminado. Los niveles de ejecución utilizados son:
 # 0 - detener (NO establezca initdefault en esto)
 # 1 - Modo de usuario único
@@ -55,8 +54,6 @@
 # 4 - sin usar
 # 5 - X11
 # 6 - reiniciar (NO establezca initdefault en esto)
-
-          \end{minted}
         \end{code}
 
   \item Considerar la siguiente instrucción \texttt{grub2-mkconfig > /dev/null}
@@ -74,8 +71,7 @@
         Al acceder a un objeto remoto a través de un enlace de base de datos, la base de datos local
         actúa como un cliente de Oracle. Hay una variedad de variaciones de sintaxis en la documentación,
         pero las que usará con más frecuencia son las siguientes.
-        \begin{code}
-          \begin{minted}{sql}
+        \begin{code}{sql}
 -- Usuario Remoto: scott
 -- Contraseña Remota: tiger
 
@@ -102,7 +98,6 @@ CREATE PUBLIC DATABASE LINK scott_remote
 CREATE DATABASE LINK scott_local
    CONNECT TO scott IDENTIFIED BY tiger
    USING 'local';
-          \end{minted}
         \end{code}
 
         Los enlaces de bases de datos privadas solo son visibles para el propietario

@@ -31,9 +31,6 @@ es-tabla
 \usepackage{caption}
 \usepackage{breqn}
 
-
-\newenvironment{code}{\captionsetup{type=listing}}{}
-
 \usemintedstyle{default}
 
 \usepackage[ruled,vlined]{algorithm2e}
@@ -41,38 +38,35 @@ es-tabla
 \renewcommand{\listingscaption}{Código}
 \renewcommand\listoflistingscaption{Índice de \listingscaption\@s}
 
-\setminted[diff]{
-  frame=lines,
-  framesep=2mm,
-  baselinestretch=1.2,
-  bgcolor=LightGray,breaklines=true,
-  fontsize=\footnotesize
-}
+\newenvironment{code}[2][htp]
+{\VerbatimEnvironment
+  \begin{listing}[#1]
+    \centering
+    \begin{minted}[
+      frame=lines,framesep=1mm,baselinestretch=0.5,breaklines=true,bgcolor=custom,fontsize=\scriptsize
+    ]{#2}}{
+    \end{minted}
+  \end{listing}}
 
-\setminted[bash]{
-  frame=single,
-  framesep=1mm,
-  baselinestretch=0.5,
-  breaklines=true,
-  bgcolor=custom,
-  fontsize=\scriptsize
-}
-
-\setminted[shell-session]{
-  frame=single,
-  framesep=1mm,
-  baselinestretch=0.5,
-  breaklines=true,
-  bgcolor=custom,
-  fontsize=\scriptsize
-}
+\newenvironment{codeC}[3][htp]
+{\VerbatimEnvironment
+  \begin{listing}[#1]
+    \caption{#3}
+    \centering
+    \begin{minted}[
+      frame=lines,framesep=1mm,baselinestretch=0.5,breaklines=true,bgcolor=custom,fontsize=\scriptsize
+    ]{#2}}{
+    \end{minted}
+  \end{listing}}
 
 
-\setminted[sql]{
-  frame=single,
-  framesep=1mm,
-  baselinestretch=0.5,
-  breaklines=true,
-  bgcolor=custom,
-  fontsize=\scriptsize
-}
+\newenvironment{codeCL}[4][htp]
+{\VerbatimEnvironment
+  \begin{listing}[#1]
+    \caption{#3}\label{#4}
+    \centering
+    \begin{minted}[
+      frame=lines,framesep=1mm,baselinestretch=0.5,breaklines=true,bgcolor=custom,fontsize=\scriptsize
+    ]{#2}}{
+    \end{minted}
+  \end{listing}}
