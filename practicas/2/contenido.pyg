@@ -1,0 +1,3 @@
+$ scp -P 2222 Descargas/LINUX.X64_193000_db_home.zip candrade@127.0.0.1:/home/candrade/Descargas/
+candrade@127.0.0.1's password:
+LINUX.X64_193000_db_home.zip                                                          100% 2918MB  44.2MB/s   01:05
