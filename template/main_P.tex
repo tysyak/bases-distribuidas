@@ -1,5 +1,6 @@
 \documentclass{IEEEtran}
 
+
 \include{main_config}
 
 \begin{document}
@@ -10,19 +11,21 @@
 
 \date{ }
 
-\input{./portada.tex}
+\input{../../template/portada.tex}
 
 \maketitle{}
 \tableofcontents{}
 
-\input{./main.tex}
+\begin{code}{latex}{A caption}{label1}
+Test of \LaTeX code
+\end{code}
 
 \newpage{}
 
-\listoffigures{}
+% \listoffigures{}
 % \listoftables{}
 % \listoflistings{}
 
-\addcontentsline{toc}{section}{Referencias}
-\printbibliography{}
+% \addcontentsline{toc}{section}{Referencias}
+% \printbibliography{}
 \end{document}
