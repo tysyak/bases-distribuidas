@@ -1,0 +1,72 @@
+\documentclass{IEEEtran}
+
+\include{main_config}
+
+\begin{document}
+\author{Cristian Romero Andrade}
+\title{\tituloPractica{}}
+
+\author{\IEEEauthorblockN{Cristian Romero Andrade}}
+
+\date{ }
+
+\input{../../template/portada.tex}
+
+\maketitle{}
+\tableofcontents{}
+
+\dotfill{}
+
+% --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+\begin{abstract}
+La presente muestra paso a paso la instalación del gestor de bases de datos
+\textbf{Oracle Database 19c} en una máquina virtual con \textbf{Oracle Linux 8}.
+\end{abstract}
+
+\dotfill{}
+
+\section{Introducción}\label{sec:introduccion}
+\IEEEPARstart{E}{l} sistema operativo \textbf{Oracle Linux 8} es perfecto
+para instalar \textbf{Oracle Database 19c}, la cual  es la versión actual a largo plazo,
+que además proporciona el nivel más alto de estabilidad de la versión y el plazo más
+largo para asistencia y corrección de errores.
+
+En esta práctica configuraremos la red de nuestros dispositivos, tanto la máquina anfitriona
+como la máquina virtual para que haya una comunicación bidireccional entre ellas. Una vez
+configurada se usara el protocolo \texttt{ssh} para usar en su totalidad una interfaz desde
+la máquina cliente (la máquina anfitriona o cualquier otra que este en la misma red).
+
+\texttt{ssh} (cliente SSH) es un programa para iniciar sesión en una máquina remota y
+para ejecutar comandos en una máquina remota. Su objetivo es proporcionar comunicaciones
+cifradas seguras entre dos hosts que no son de confianza a través de una red insegura.
+Configuraremos este servicio para poder usar conexiones X11\footnote{X11 es un sistema de ventanas común en entornos UNIX} de la VM al cliente.
+
+
+
+\section{Objetivo}\label{sec:objetivo}
+Realizar la instalación del software de \textbf{Oracle 19c--19.3} (sin crear aún
+la Base de Datos).
+
+% === === === === === === === === === === === === === === === === === === === ===
+\section{Contenido}\label{sec:contenido}
+\subfile{contenido}
+
+% === === === === === === === === === === === === === === === === === === === ===
+
+\section{Conclusión}\label{sec:conclusion}
+Se instaló el software \textbf{Oracle Database 19c} en nuestra VM de manera exitosa,
+en este escrito se experimento más con el protocolo \texttt{ssh} en vez de un entorno
+``real'', puesto que en un futuro dichas prácticas con estos protocolos servirán para
+no usar una máquina física y trabajar con pura red con solo lo necesario, aunque
+también se puede implementar un servidor VNC.\@
+Se configuro el entorno del usuario y grupos que usa la instalación de ODB19c para no
+tener inconvenientes durante el proceso de instalación.
+% --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+\vfill{}
+\listoffigures{}
+% \listoftables{}
+\listoflistings{}
+\nocite{oraclebd2021}
+\addcontentsline{toc}{section}{Referencias}
+\printbibliography{}
+\end{document}
