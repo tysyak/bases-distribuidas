@@ -18,6 +18,16 @@ touch "$DIR_PRACTICA_NUEVA/main.org"
 printf "#+TITLE: practica $PRACTICA_NUEVA
 #+LANGUAGE: es #+OPTIONS: title:nil toc:nil
 
-#+LATEX: \\input{./portada.tex}\n\n* Primera Seccion\nLorem..
 #+LATEX: \\\renewcommand{\\\thesubsubsection}{C\\\arabic{subsubsection}}
+
+#+LATEX: \dotfill{}
+
+#+LATEX:\begin{abstract}
+
+Lorem...
+
+#+LATEX: \end{abstract}
+
+#+LATEX: \dotfill{}
+
 " >> $DIR_PRACTICA_NUEVA/main.org
